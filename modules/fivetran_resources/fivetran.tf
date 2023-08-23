@@ -37,7 +37,7 @@ resource "snowflake_warehouse_grant" "tf_fivetran_warehouse_grant" {
       ]
 }
 
-resource "snowflake_database_grant" "grant" {
+resource "snowflake_database_grant" "tf_fivetran_database_grant" {
   database_name = snowflake_database.tf_fivetran_database.name
   privilege = "ALL PRIVILEGES"
   roles     = [snowflake_role.tf_fivetran_role.name]
