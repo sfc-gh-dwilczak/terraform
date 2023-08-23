@@ -23,7 +23,7 @@ provider "snowflake" {
   region   = var.SNOWFLAKE_REGION
 }
 
-module "snowflake_resources" {
+module "fivetran_resources" {
   name    = "FIVETRAN_DATABASE"
   comment = "Fivetran database for loading in data."
   source  = "modules/fivetran_resources"
