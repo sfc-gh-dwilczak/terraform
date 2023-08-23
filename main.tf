@@ -25,3 +25,7 @@ provider "snowflake" {
 module "fivetran_resources" {
   source  = "./modules/fivetran_resources"
 }
+
+module "dbt_resources" {
+  source  = "./modules/dbt_resources"
+}
