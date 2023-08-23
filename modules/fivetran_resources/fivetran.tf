@@ -10,7 +10,7 @@ resource "snowflake_warehouse" "tf_fivetran_warehouse" {
   warehouse_type = "standard"
   auto_suspend = 60
   auto_resume = true
-  initially_suspended = true;
+  initially_suspended = true
 }
 
 resource "snowflake_role" "tf_fivetran_role" {
