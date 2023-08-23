@@ -23,6 +23,5 @@ provider "snowflake" {
 }
 
 module "fivetran_resources" {
-  name    = "FIVETRAN_DATABASE"
   source  = "./modules/fivetran_resources"
 }
