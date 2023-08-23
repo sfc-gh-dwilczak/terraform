@@ -1,2 +1,2 @@
-# terraform_demo_account
+# Terraform demo account
 Terraform my demo account to manage it.
