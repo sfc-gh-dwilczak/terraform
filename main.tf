@@ -16,7 +16,6 @@ terraform {
 }
 
 provider "snowflake" {
-  // required
   username = var.SNOWFLAKE_USERNAME
   account  = var.SNOWFLAKE_ACCOUNT
   password = var.SNOWFLAKE_PASSWORD
@@ -25,6 +24,6 @@ provider "snowflake" {
 
 module "fivetran_resources" {
   name    = "FIVETRAN_DATABASE"
-  comment = "Fivetran database for loading in data."
   source  = "./modules/fivetran_resources"
+  time_travel_in_days = 10
 }
