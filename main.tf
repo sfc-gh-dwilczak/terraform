@@ -25,5 +25,4 @@ provider "snowflake" {
 module "fivetran_resources" {
   name    = "FIVETRAN_DATABASE"
   source  = "./modules/fivetran_resources"
-  time_travel_in_days = 10
 }

@@ -2,6 +2,7 @@ resource "snowflake_database" "tf_fivetran_database" {
   name    = var.database
   data_retention_time_in_days = var.time_travel_in_days
   comment = "Fivetran database for loading in data."
+  data_retention_time_in_days = 10
 }
 
 resource "snowflake_warehouse" "tf_fivetran_warehouse" {
