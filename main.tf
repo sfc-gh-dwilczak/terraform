@@ -26,5 +26,5 @@ provider "snowflake" {
 module "fivetran_resources" {
   name    = "FIVETRAN_DATABASE"
   comment = "Fivetran database for loading in data."
-  source  = "modules/fivetran_resources"
+  source  = "./modules/fivetran_resources"
 }
