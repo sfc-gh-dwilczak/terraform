@@ -39,7 +39,7 @@ resource "snowflake_warehouse_grant" "tf_fivetran_warehouse_grant" {
 
 resource "snowflake_database_grant" "grant" {
   database_name = snowflake_database.tf_fivetran_database.name
-  privilege = "CREATE SCHEMA MONITOR USAGE"
+  privilege = "ALL PRIVILEGES"
   roles     = [snowflake_role.tf_fivetran_role.name]
 }
 
