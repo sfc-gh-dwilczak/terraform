@@ -23,7 +23,7 @@ resource "snowflake_user" "tf_dbt_user" {
   name         = "DBT_USER"
   login_name   = "DBT_USER"
   comment      = "DBT service account"
-  password     = "password123"
+  password     = var.DBT_PASSWORD
   default_role = snowflake_role.tf_dbt_role.name
   default_warehouse = snowflake_warehouse.tf_dbt_warehouse.name
 }

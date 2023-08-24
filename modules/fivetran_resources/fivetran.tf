@@ -23,7 +23,7 @@ resource "snowflake_user" "tf_fivetran_user" {
   name         = "FIVETRAN_USER"
   login_name   = "FIVETRAN_USER"
   comment      = "Fivetran service account"
-  password     = "password123"
+  password     = var.FIVETRAN_PASSWORD
   default_role = snowflake_role.tf_fivetran_role.name
   default_warehouse = snowflake_warehouse.tf_fivetran_warehouse.name
 }
