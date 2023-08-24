@@ -24,8 +24,10 @@ provider "snowflake" {
 
 module "fivetran_resources" {
   source  = "./modules/fivetran_resources"
+  FIVETRAN_PASSWORD = var.FIVETRAN_PASSWORD
 }
 
 module "dbt_resources" {
   source  = "./modules/dbt_resources"
+  DBT_PASSWORD = var.DBT_PASSWORD
 }
