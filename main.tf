@@ -34,5 +34,5 @@ module "dbt_resources" {
 
 module "hex_resources" {
   source  = "./modules/hex"
-  DBT_PASSWORD = var.HEX_PASSWORD
+  HEX_PASSWORD = var.HEX_PASSWORD
 }
