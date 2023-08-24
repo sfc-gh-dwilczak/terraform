@@ -1,3 +1,3 @@
-variable "fivetran_password" {
+variable "FIVETRAN_PASSWORD" {
      type = string
 }

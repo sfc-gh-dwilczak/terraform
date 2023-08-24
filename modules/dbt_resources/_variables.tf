@@ -1,3 +1,3 @@
-variable "dbt_password" {
+variable "DBT_PASSWORD" {
      type = string
 }
