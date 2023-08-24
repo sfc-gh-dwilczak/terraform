@@ -21,3 +21,7 @@ variable "FIVETRAN_PASSWORD" {
 variable "DBT_PASSWORD" {
      type = string
 }
+
+variable "HEX_PASSWORD" {
+     type = string
+}
