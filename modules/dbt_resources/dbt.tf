@@ -7,8 +7,8 @@ resource "snowflake_database" "tf_dbt_database" {
 resource "snowflake_warehouse" "tf_dbt_warehouse" {
   name           = "DBT_WAREHOUSE"
   comment        = "DBT warehouse for transforming data. Starting with xsmall but will change based on demand."
-  warehouse_size = "xsmall"
-  warehouse_type = "standard"
+  warehouse_size = "XSMALL"
+  warehouse_type = "STANDARD"
   auto_suspend = 60
   auto_resume = true
   initially_suspended = true

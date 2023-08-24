@@ -7,8 +7,8 @@ resource "snowflake_database" "tf_fivetran_database" {
 resource "snowflake_warehouse" "tf_fivetran_warehouse" {
   name           = "FIVETRAN_WAREHOUSE"
   comment        = "Fivetran warehouse for loading data. Starting with xsmall but will change based on demand."
-  warehouse_size = "xsmall"
-  warehouse_type = "standard"
+  warehouse_size = "XSMALL"
+  warehouse_type = "STANDARD"
   auto_suspend = 60
   auto_resume = true
   initially_suspended = true
@@ -51,7 +51,6 @@ resource "snowflake_role_grants" "tf_fivetran_grants" {
   
   // Roles that will inhert this role.
   roles = [
-    "SYSADMIN",
     "DBT_ROLE"
   ]
   // What users should we grant this role to.
