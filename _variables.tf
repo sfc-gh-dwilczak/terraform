@@ -13,3 +13,11 @@ variable "SNOWFLAKE_PASSWORD" {
 variable "SNOWFLAKE_REGION" {
      type = string
 }
+
+variable "FIVETRAN_PASSWORD" {
+     type = string
+}
+
+variable "DBT_PASSWORD" {
+     type = string
+}
