@@ -51,7 +51,7 @@ resource "snowflake_role_grants" "tf_fivetran_grants" {
   
   // Roles that will inhert this role.
   roles = [
-    "SYSADMIN"
+    "SYSADMIN",
     "DBT_ROLE"
   ]
   // What users should we grant this role to.
