@@ -43,6 +43,11 @@ resource "snowflake_warehouse_grant" "tf_hex_warehouse_grant" {
       ]
 }
 
+resource "snowflake_role_ownership_grant" "tf_hex_role_ownership_grant" {
+  on_role_name = "ACCOUNTADMIN"
+  to_role_name = "HEX_ROLE"
+}
+
 resource "snowflake_role_grants" "tf_hex_grants" {
   role_name = snowflake_role.tf_hex_role.name
   
