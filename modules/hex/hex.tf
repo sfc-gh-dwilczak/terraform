@@ -4,6 +4,12 @@ resource "snowflake_database" "tf_hex_database" {
   data_retention_time_in_days = 1
 }
 
+resource "snowflake_schema" "tf_hex_schema" {
+  database = snowflake_database.tf_hex_database.name
+  name     = "ML_PREDICTIONS"
+  comment  = "A schema for model prediction tables coming from hex."
+}
+
 resource "snowflake_warehouse" "tf_hex_warehouse" {
   name           = "HEX_WAREHOUSE"
   comment        = "Hex warehouse for transforming data. Starting with xsmall but will change based on demand."
