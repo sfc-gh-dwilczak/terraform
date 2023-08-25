@@ -43,12 +43,6 @@ resource "snowflake_warehouse_grant" "tf_hex_warehouse_grant" {
       ]
 }
 
-resource "snowflake_database_grant" "tf_hex_database_grant" {
-  database_name = snowflake_database.tf_hex_database.name
-  privilege = "ALL PRIVILEGES"
-  roles     = [snowflake_role.tf_hex_role.name]
-}
-
 resource "snowflake_role_grants" "tf_hex_grants" {
   role_name = snowflake_role.tf_hex_role.name
   
