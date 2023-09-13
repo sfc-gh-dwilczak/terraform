@@ -25,3 +25,7 @@ variable "DBT_PASSWORD" {
 variable "HEX_PASSWORD" {
      type = string
 }
+
+variable "THOUGHTSPOT_PASSWORD" {
+     type = string
+}
