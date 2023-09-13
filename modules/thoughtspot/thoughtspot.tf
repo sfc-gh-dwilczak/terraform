@@ -1,12 +1,12 @@
 resource "snowflake_database" "tf_thoughtspot_database" {
   name    = "THOUGHTSPOT_DATABASE"
-  comment = "Hex database for loading in data."
+  comment = "Thoughtspot database for loading in data."
   data_retention_time_in_days = 1
 }
 
 resource "snowflake_warehouse" "tf_thoughtspot_warehouse" {
   name           = "THOUGHTSPOT_WAREHOUSE"
-  comment        = "Hex warehouse for transforming data. Starting with xsmall but will change based on demand."
+  comment        = "Thoughtspot warehouse for transforming data. Starting with xsmall but will change based on demand."
   warehouse_size = "XSMALL"
   warehouse_type = "STANDARD"
   auto_suspend = 60
@@ -16,7 +16,7 @@ resource "snowflake_warehouse" "tf_thoughtspot_warehouse" {
 
 resource "snowflake_role" "tf_thoughtspot_role" {
   name    = "THOUGHTSPOT_ROLE"
-  comment = "hex role for loading data"
+  comment = "Thoughtspot role for loading data"
 }
 
 resource "snowflake_user" "tf_thoughtspot_user" {

@@ -48,7 +48,8 @@ resource "snowflake_role_grants" "tf_dbt_grants" {
   
   // Roles that will inhert this role.
   roles = [
-    "HEX_ROLE"
+    "HEX_ROLE",
+    "THOUGHTSPOT_ROLE"
   ]
   // What users should we grant this role to.
   users = [
