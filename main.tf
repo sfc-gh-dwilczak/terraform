@@ -39,5 +39,5 @@ module "hex_resources" {
 
 module "thoughtspot_resources" {
   source  = "./modules/thoughtspot"
-  HEX_PASSWORD = var.THOUGHTSPOT_PASSWORD
+  THOUGHTSPOT_PASSWORD = var.THOUGHTSPOT_PASSWORD
 }
