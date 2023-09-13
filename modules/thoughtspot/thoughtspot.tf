@@ -25,7 +25,7 @@ resource "snowflake_user" "tf_thoughtspot_user" {
   comment      = "THOUGHT SPOT service account"
   password     = var.THOUGHTSPOT_PASSWORD
   default_role = snowflake_role.tf_thoughtspot_role.name
-  default_warehouse = snowflake_warehouse.tf_hthoughtspot_warehouse.name
+  default_warehouse = snowflake_warehouse.tf_thoughtspot_warehouse.name
 }
 
 resource "snowflake_warehouse_grant" "tf_thoughtspot_warehouse_grant" {
