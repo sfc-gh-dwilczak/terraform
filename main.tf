@@ -28,7 +28,12 @@ module "fivetran_resources" {
 }
 
 module "dbt_resources" {
-  source  = "./modules/dbt"
+  source  = "./modules/dbt_dev"
+  DBT_PASSWORD = var.DBT_PASSWORD
+}
+
+module "dbt_resources_prod" {
+  source  = "./modules/dbt_prod"
   DBT_PASSWORD = var.DBT_PASSWORD
 }
 
