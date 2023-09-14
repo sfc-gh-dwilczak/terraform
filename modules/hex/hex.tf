@@ -1,5 +1,5 @@
 resource "snowflake_database" "tf_hex_database" {
-  name    = "HEX_DATABASE"
+  name    = "HEX"
   comment = "Hex database for loading in data."
   data_retention_time_in_days = 1
 }

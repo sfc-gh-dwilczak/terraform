@@ -1,6 +1,12 @@
 resource "snowflake_database" "tf_dbt_database" {
-  name    = "DBT_DATABASE"
-  comment = "DBT database for loading in data."
+  name    = "DBT_DEV"
+  comment = "DBT database curating data but this is the development database."
+  data_retention_time_in_days = 1
+}
+
+resource "snowflake_database" "tf_dbt_database_prod" {
+  name    = "DBT_PROD"
+  comment = "DBT database curating data but this is the production database."
   data_retention_time_in_days = 1
 }
 
@@ -31,7 +37,14 @@ resource "snowflake_user" "tf_dbt_user" {
 resource "snowflake_warehouse_grant" "tf_dbt_warehouse_grant" {
   warehouse_name = snowflake_warehouse.tf_dbt_warehouse.name
   privilege      = "USAGE"
+  roles = [
+        snowflake_role.tf_dbt_role.name
+      ]
+}
 
+resource "snowflake_warehouse_grant" "tf_dbt_warehouse_grant_prod" {
+  warehouse_name = snowflake_warehouse.tf_dbt_warehouse_prod.name
+  privilege      = "USAGE"
   roles = [
         snowflake_role.tf_dbt_role.name
       ]
@@ -39,6 +52,12 @@ resource "snowflake_warehouse_grant" "tf_dbt_warehouse_grant" {
 
 resource "snowflake_database_grant" "tf_dbt_database_grant" {
   database_name = snowflake_database.tf_dbt_database.name
+  privilege = "ALL PRIVILEGES"
+  roles     = [snowflake_role.tf_dbt_role.name]
+}
+
+resource "snowflake_database_grant" "tf_dbt_database_grant_prod" {
+  database_name = snowflake_database.tf_dbt_database_prod.name
   privilege = "ALL PRIVILEGES"
   roles     = [snowflake_role.tf_dbt_role.name]
 }

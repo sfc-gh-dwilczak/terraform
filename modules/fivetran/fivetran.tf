@@ -1,5 +1,5 @@
 resource "snowflake_database" "tf_fivetran_database" {
-  name    = "FIVETRAN_DATABASE"
+  name    = "FIVETRAN"
   comment = "Fivetran database for loading in data."
   data_retention_time_in_days = 10
 }
