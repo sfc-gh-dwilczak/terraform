@@ -5,7 +5,7 @@ resource "snowflake_database" "tf_dbt_database_prod" {
 }
 
 resource "snowflake_warehouse_grant" "tf_dbt_warehouse_grant_prod" {
-  warehouse_name = snowflake_warehouse.tf_dbt_warehouse_prod.name
+  warehouse_name = "DBT_WAREHOUSE"
   privilege      = "USAGE"
   roles = [
         "DBT_ROLE"
