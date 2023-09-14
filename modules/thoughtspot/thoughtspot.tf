@@ -1,5 +1,5 @@
 resource "snowflake_database" "tf_thoughtspot_database" {
-  name    = "THOUGHTSPOT_DATABASE"
+  name    = "THOUGHTSPOT"
   comment = "Thoughtspot database for loading in data."
   data_retention_time_in_days = 1
 }
